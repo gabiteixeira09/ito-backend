@@ -98,7 +98,8 @@ const THEMES = [
   { title: "O que seria ruim numa aula", low: "de boas", high: "que vergonha!" },
   { title: "Alter ego", low: "não gostaria", high: "é meu tipo" },
   { title: "Personagens com piores temperamentos", low: "desnecessária", high: "explosivo" },
-  { title: "Habilidades importantes para streamers", low: "não importante", high: "obrigatória" }
+  { title: "Habilidades importantes para streamers", low: "não importante", high: "obrigatória" },
+  { title: "Coisas para fazer na hora H", low: "aff, nem", high: "putz, amo" }
 ];
 
 function getRandomTheme() {

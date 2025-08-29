@@ -12,7 +12,7 @@ function createRoom(hostId) {
     host: hostId,
     players: {},
     order: [],
-    started: false // 🔹 controla se partida começou
+    started: false // só vira true quando o host clicar em startGame
   };
   return code;
 }
