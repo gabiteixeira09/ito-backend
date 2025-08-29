@@ -11,7 +11,8 @@ function createRoom(hostId) {
   rooms[code] = {
     host: hostId,
     players: {},
-    order: [] // aqui sim, dentro da sala
+    order: [],
+    started: false // 🔹 controla se partida começou
   };
   return code;
 }
@@ -19,10 +20,12 @@ function createRoom(hostId) {
 // Jogador entra na sala
 function joinRoom(code, playerId, playerName) {
   if (!rooms[code]) return false;
-  rooms[code].players[playerId] = { 
-    name: playerName, 
-    clue: null, 
-    card: null 
+  if (rooms[code].started) return false; // 🔹 bloqueia se partida já começou
+
+  rooms[code].players[playerId] = {
+    name: playerName,
+    clue: null,
+    card: null
   };
   return true;
 }
